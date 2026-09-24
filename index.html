@@ -1,0 +1,1013 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anna Cafe | South Indian Cafe</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fff8e7;
+    color:#3b2118;
+}
+
+/* NAVBAR */
+
+header{
+    background:#5b1f12;
+    padding:18px 7%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#ffd166;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:#ffd166;
+}
+
+/* HOME */
+
+.home{
+    height:90vh;
+    background:
+    linear-gradient(rgba(60,25,15,.65),rgba(60,25,15,.65)),
+    url("https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.home-content{
+    max-width:800px;
+}
+
+.home h1{
+    font-size:70px;
+    color:#ffd166;
+    margin-bottom:15px;
+}
+
+.home h2{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.home p{
+    font-size:19px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#d35400;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    margin:5px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#ffd166;
+    color:#5b1f12;
+}
+
+.yellow{
+    background:#ffd166;
+    color:#5b1f12;
+}
+
+/* COMMON */
+
+section{
+    padding:80px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-size:42px;
+    color:#7b241c;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#765b4a;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.about-text h3{
+    color:#7b241c;
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.feature{
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/* MENU */
+
+#menu{
+    background:#fff0d2;
+}
+
+.category{
+    margin-bottom:50px;
+}
+
+.category h3{
+    text-align:center;
+    color:#7b241c;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.food-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 7px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.food-card:hover{
+    transform:translateY(-7px);
+}
+
+.food-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.food-info{
+    padding:20px;
+}
+
+.food-info h4{
+    font-size:22px;
+    color:#5b1f12;
+    margin-bottom:8px;
+}
+
+.food-info p{
+    color:#765b4a;
+    line-height:1.5;
+    margin-bottom:12px;
+}
+
+.price{
+    color:#d35400;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* OFFER */
+
+.offer{
+    background:#5b1f12;
+    color:white;
+    text-align:center;
+}
+
+.offer h2{
+    color:#ffd166;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.offer p{
+    font-size:19px;
+    margin-bottom:20px;
+}
+
+/* CONTACT */
+
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    background:#7b241c;
+    color:white;
+    padding:40px;
+    border-radius:20px;
+}
+
+.contact-info h3{
+    color:#ffd166;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+.contact-item{
+    margin-bottom:22px;
+    line-height:1.7;
+}
+
+.contact-item strong{
+    color:#ffd166;
+}
+
+.form{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 7px 20px rgba(0,0,0,.1);
+}
+
+.form h3{
+    color:#7b241c;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.form input,
+.form textarea,
+.form select{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.form textarea{
+    height:130px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#32120c;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+footer h2{
+    color:#ffd166;
+    margin-bottom:10px;
+}
+
+.social{
+    margin:20px;
+}
+
+.social a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .about,
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .menu-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .home h1{
+        font-size:45px;
+    }
+
+    .home h2{
+        font-size:25px;
+    }
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+☕ Anna <span>Cafe</span>
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="home" id="home">
+
+<div class="home-content">
+
+<h1>Anna Cafe</h1>
+
+<h2>Authentic South Indian Taste</h2>
+
+<p>
+Traditional South Indian food, delicious flavours,
+fresh ingredients and famous filter coffee.
+</p>
+
+<a href="#menu" class="btn">
+View Menu
+</a>
+
+<a href="#contact" class="btn yellow">
+Contact Us
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="title">
+
+<h2>About Anna Cafe</h2>
+
+<p>Traditional taste with modern hospitality</p>
+
+</div>
+
+
+<div class="about">
+
+<div>
+
+<img
+src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1000&q=80"
+alt="South Indian Food">
+
+</div>
+
+
+<div class="about-text">
+
+<h3>Our Story</h3>
+
+<p>
+Anna Cafe brings the authentic flavours of South India
+to your table.
+</p>
+
+<p>
+Our menu is inspired by traditional recipes and prepared
+using fresh ingredients and aromatic spices.
+</p>
+
+<p>
+We believe that good food brings people together.
+</p>
+
+
+<div class="features">
+
+<div class="feature">
+🌿<br><br>
+<b>Fresh Food</b>
+</div>
+
+<div class="feature">
+👨‍🍳<br><br>
+<b>Traditional Recipe</b>
+</div>
+
+<div class="feature">
+☕<br><br>
+<b>Fresh Coffee</b>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section id="menu">
+
+<div class="title">
+
+<h2>Our Menu</h2>
+
+<p>Delicious South Indian favourites</p>
+
+</div>
+
+
+<!-- DOSA -->
+
+<div class="category">
+
+<h3>🥞 Dosa Specials</h3>
+
+<div class="menu-grid">
+
+
+<!-- MASALA DOSA -->
+
+<div class="food-card">
+
+<img
+src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+alt="Masala Dosa">
+
+<div class="food-info">
+
+<h4>Masala Dosa</h4>
+
+<p>
+Crispy dosa filled with delicious potato masala,
+served with sambar and chutney.
+</p>
+
+<span class="price">₹120</span>
+
+</div>
+
+</div>
+
+
+<!-- PLAIN DOSA -->
+
+<div class="food-card">
+
+<img
+src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=800&q=80"
+alt="Plain Dosa">
+
+<div class="food-info">
+
+<h4>Plain Dosa</h4>
+
+<p>
+Classic crispy South Indian dosa served with
+coconut chutney and sambar.
+</p>
+
+<span class="price">₹90</span>
+
+</div>
+
+</div>
+
+
+<!-- UTTAPAM -->
+
+<div class="food-card">
+
+<img
+src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80"
+alt="Vegetable Uttapam">
+
+<div class="food-info">
+
+<h4>Vegetable Uttapam</h4>
+
+<p>
+Soft uttapam topped with fresh vegetables
+and traditional spices.
+</p>
+
+<span class="price">₹110</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- IDLI VADA -->
+
+<div class="category">
+
+<h3>🍽️ Idli & Vada</h3>
+
+<div class="menu-grid">
+
+
+<!-- IDLI -->
+
+<div class="food-card">
+
+<img
+src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80"
+alt="Idli Sambar">
+
+<div class="food-info">
+
+<h4>Idli Sambar</h4>
+
+<p>
+Soft steamed idlis served with hot sambar
+and coconut chutney.
+</p>
+
+<span class="price">₹80</span>
+
+</div>
+
+</div>
+
+
+<!-- VADA -->
+
+<div class="food-card">
+
+<img
+src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=80"
+alt="Medu Vada">
+
+<div class="food-info">
+
+<h4>Medu Vada</h4>
+
+<p>
+Crispy South Indian medu vada served with
+sambar and chutney.
+</p>
+
+<span class="price">₹90</span>
+
+</div>
+
+</div>
+
+
+<!-- IDLI VADA COMBO -->
+
+<div class="food-card">
+
+<img
+src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=800&q=80"
+alt="Idli Vada Combo">
+
+<div class="food-info">
+
+<h4>Idli Vada Combo</h4>
+
+<p>
+Soft idli and crispy vada served together
+with sambar and chutney.
+</p>
+
+<span class="price">₹120</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RICE -->
+
+<div class="category">
+
+<h3>🍛 Rice & Meals</h3>
+
+<div class="menu-grid">
+
+
+<div class="food-card">
+
+<div class="food-info">
+
+<h4>South Indian Thali</h4>
+
+<p>
+Rice, sambar, rasam, vegetables, curd,
+pickle and papad.
+</p>
+
+<span class="price">₹180</span>
+
+</div>
+
+</div>
+
+
+<div class="food-card">
+
+<div class="food-info">
+
+<h4>Lemon Rice</h4>
+
+<p>
+Flavourful rice prepared with fresh lemon,
+peanuts and South Indian spices.
+</p>
+
+<span class="price">₹100</span>
+
+</div>
+
+</div>
+
+
+<div class="food-card">
+
+<div class="food-info">
+
+<h4>Curd Rice</h4>
+
+<p>
+Creamy curd rice with traditional South
+Indian tempering.
+</p>
+
+<span class="price">₹90</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DRINKS -->
+
+<div class="category">
+
+<h3>☕ Beverages</h3>
+
+<div class="menu-grid">
+
+
+<div class="food-card">
+
+<div class="food-info">
+
+<h4>South Indian Filter Coffee</h4>
+
+<p>
+Strong and aromatic traditional filter coffee.
+</p>
+
+<span class="price">₹60</span>
+
+</div>
+
+</div>
+
+
+<div class="food-card">
+
+<div class="food-info">
+
+<h4>Masala Tea</h4>
+
+<p>
+Hot Indian tea prepared with aromatic spices.
+</p>
+
+<span class="price">₹50</span>
+
+</div>
+
+</div>
+
+
+<div class="food-card">
+
+<div class="food-info">
+
+<h4>Fresh Lime Soda</h4>
+
+<p>
+Refreshing lemon drink served chilled.
+</p>
+
+<span class="price">₹70</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OFFER -->
+
+<section class="offer">
+
+<h2>Today's Special ☕</h2>
+
+<p>
+Masala Dosa + Medu Vada + Filter Coffee
+</p>
+
+<a href="#contact" class="btn yellow">
+Visit Anna Cafe
+</a>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="title">
+
+<h2>Contact Us</h2>
+
+<p>We would love to serve you!</p>
+
+</div>
+
+
+<div class="contact">
+
+
+<div class="contact-info">
+
+<h3>Anna Cafe</h3>
+
+<div class="contact-item">
+
+📍 <strong>Address</strong><br>
+
+Main Market Road,<br>
+Your City, India
+
+</div>
+
+
+<div class="contact-item">
+
+📞 <strong>Phone</strong><br>
+
++91 98765 43210
+
+</div>
+
+
+<div class="contact-item">
+
+✉️ <strong>Email</strong><br>
+
+annacafe@example.com
+
+</div>
+
+
+<div class="contact-item">
+
+🕐 <strong>Opening Hours</strong><br>
+
+Monday - Sunday<br>
+7:00 AM - 10:00 PM
+
+</div>
+
+</div>
+
+
+<div class="form">
+
+<h3>Send Message</h3>
+
+<form onsubmit="sendMessage(event)">
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+placeholder="Your Email"
+required>
+
+<input
+type="tel"
+placeholder="Phone Number">
+
+<select required>
+
+<option value="">
+Select Enquiry
+</option>
+
+<option>Table Reservation</option>
+<option>Food Order</option>
+<option>Feedback</option>
+<option>General Enquiry</option>
+
+</select>
+
+<textarea
+placeholder="Your Message"
+required></textarea>
+
+<button class="btn" type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>☕ Anna Cafe</h2>
+
+<p>
+Authentic South Indian Taste
+</p>
+
+<div class="social">
+
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">WhatsApp</a>
+
+</div>
+
+<p>
+© 2026 Anna Cafe | All Rights Reserved
+</p>
+
+</footer>
+
+
+<script>
+
+function sendMessage(event){
+
+event.preventDefault();
+
+alert(
+"Thank you for contacting Anna Cafe!"
+);
+
+event.target.reset();
+
+}
+
+</script>
+
+</body>
+</html>
+```
